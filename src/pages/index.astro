@@ -52,6 +52,8 @@ import Layout from '../layouts/Layout.astro';
         <!-- Direct address -->
         <p class="hero-hi">Hi.</p>
         <h1 class="hero-name">I'm David Melesse.</h1>
+        <p class="hero-becoming">Becoming who I am.</p>
+        <p class="hero-studying">Studying Computer Science, Data Analytics & Philosophy @ Westmont</p>
 
         <!--
           Hover over underlined words — there's more there.
@@ -297,6 +299,24 @@ import Layout from '../layouts/Layout.astro';
   .s-green { background: var(--eth-green); }
   .s-gold  { background: var(--eth-gold); }
   .s-red   { background: var(--eth-red); }
+
+  .hero-becoming {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-muted-dark);
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+  }
+  .hero-studying {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-muted-dark);
+    opacity: 0.55;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
 
   /* Name — the 3rd wall break starts here */
   .hero-hi {

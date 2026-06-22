@@ -2,6 +2,7 @@
 title: "What AI Says About Being Human"
 date: 2026-06-21
 description: "The more I understand what artificial intelligence can do, the more convinced I am that the really interesting question isn't what machines will become — it's what their existence reveals about us."
+category: ai
 draft: false
 ---
 

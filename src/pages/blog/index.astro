@@ -8,6 +8,16 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 function formatDate(date: Date) {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
+
+const categoryLabels: Record<string, string> = {
+  ai: 'AI & Technology',
+  faith: 'Faith',
+  daily: 'Daily Stories',
+  conversations: '1-on-1s',
+  philosophy: 'Philosophy',
+};
+
+const categories = Object.keys(categoryLabels);
 ---
 
 <Layout title="Writing — David Melesse" description="David Melesse's writing — on AI, faith, humanity, and what they have to do with each other.">
@@ -38,9 +48,16 @@ function formatDate(date: Date) {
       </div>
     </section>
 
-
     <section class="posts-section section-dark">
       <div class="inner">
+
+        <!-- Category filter tabs -->
+        <div class="category-tabs" id="category-tabs">
+          <button class="tab active" data-category="all">All</button>
+          {categories.map(cat => (
+            <button class="tab" data-category={cat}>{categoryLabels[cat]}</button>
+          ))}
+        </div>
 
         {posts.length === 0 ? (
           <div class="empty-state">
@@ -48,14 +65,15 @@ function formatDate(date: Date) {
             <p class="empty-sub">Accumulating the argument.</p>
           </div>
         ) : (
-          <ul class="post-list" role="list">
+          <ul class="post-list" role="list" id="post-list">
             {posts.map((post) => (
-              <li class="post-item">
+              <li class="post-item" data-category={post.data.category}>
                 <a href={`/blog/${post.slug}`} class="post-link">
                   <div class="post-meta">
                     <time class="post-date" datetime={post.data.date.toISOString()}>
                       {formatDate(post.data.date)}
                     </time>
+                    <span class="post-category">{categoryLabels[post.data.category ?? 'ai']}</span>
                   </div>
                   <div class="post-content">
                     <h2 class="post-title">{post.data.title}</h2>
@@ -70,7 +88,6 @@ function formatDate(date: Date) {
 
       </div>
     </section>
-
 
     <footer class="footer">
       <div class="inner footer-inner">
@@ -93,6 +110,26 @@ function formatDate(date: Date) {
 
 </Layout>
 
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.tab');
+  const items = document.querySelectorAll<HTMLLIElement>('.post-item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const cat = tab.dataset.category;
+      items.forEach(item => {
+        if (cat === 'all' || item.dataset.category === cat) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
 
 <style>
   /* ── HEADER ── */
@@ -171,9 +208,40 @@ function formatDate(date: Date) {
     line-height: 1.8;
   }
 
+  /* ── CATEGORY TABS ── */
+  .category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    padding-top: 0.5rem;
+  }
+  .tab {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.875rem;
+    border-radius: 999px;
+    border: 1px solid rgba(240, 232, 216, 0.12);
+    background: transparent;
+    color: var(--text-muted-dark);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab:hover {
+    border-color: rgba(200, 137, 58, 0.4);
+    color: var(--gold);
+  }
+  .tab.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--espresso);
+  }
+
   /* ── POSTS ── */
   .section-dark { background: var(--espresso); }
-  .posts-section { padding: 5rem 2.5rem 8rem; }
+  .posts-section { padding: 4rem 2.5rem 8rem; }
 
   .empty-state {
     padding: 4rem 0;
@@ -203,7 +271,7 @@ function formatDate(date: Date) {
   }
   .post-link {
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 180px 1fr;
     gap: 2.5rem;
     padding: 2.5rem 0;
     transition: opacity 0.2s;
@@ -212,14 +280,27 @@ function formatDate(date: Date) {
   .post-link:hover { opacity: 0.75; }
   .post-link:hover .post-arrow { opacity: 1; }
 
+  .post-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.25rem;
+  }
   .post-date {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     color: var(--text-muted-dark);
     opacity: 0.6;
     letter-spacing: 0.04em;
-    padding-top: 0.4rem;
     display: block;
+  }
+  .post-category {
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
   }
 
   .post-title {
