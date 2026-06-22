@@ -1,0 +1,312 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<Layout title={`${post.data.title} — David Melesse`} description={post.data.description}>
+
+  <header class="page-header">
+    <nav class="page-nav">
+      <a href="/" class="logo">DM</a>
+      <div class="nav-links">
+        <a href="/projects">work</a>
+        <a href="/blog" class="active">writing</a>
+        <a href="/now">now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <article>
+
+      <header class="post-header">
+        <div class="inner">
+          <a href="/blog" class="back-link">← All writing</a>
+          <div class="eth-stripe" role="img" aria-label="Ethiopian flag colors">
+            <div class="s-green"></div>
+            <div class="s-gold"></div>
+            <div class="s-red"></div>
+          </div>
+          <time class="post-date" datetime={post.data.date.toISOString()}>
+            {formatDate(post.data.date)}
+          </time>
+          <h1 class="post-title">{post.data.title}</h1>
+          <p class="post-desc">{post.data.description}</p>
+        </div>
+      </header>
+
+      <div class="post-body section-light">
+        <div class="inner prose">
+          <Content />
+        </div>
+      </div>
+
+    </article>
+
+    <section class="post-footer-nav section-light">
+      <div class="inner">
+        <a href="/blog" class="back-full">← Back to all writing</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="inner footer-inner">
+        <div class="footer-id">
+          <span class="footer-name">David Melesse</span>
+          <span class="footer-meta">Westmont College · Class of 2027</span>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:melesse.david11@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/david-melesse-ba0166287/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="inner footer-bottom">
+        <span>Built by David Melesse · 2026</span>
+      </div>
+    </footer>
+
+  </main>
+
+</Layout>
+
+
+<style>
+  /* ── HEADER ── */
+  .page-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--espresso);
+    border-bottom: 1px solid rgba(240, 232, 216, 0.07);
+  }
+  .page-nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .logo:hover { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-on-dark);
+    opacity: 0.4;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+
+  /* ── POST HEADER ── */
+  .post-header {
+    background: var(--espresso);
+    padding: 4rem 2.5rem 5rem;
+  }
+  .inner { max-width: 720px; margin: 0 auto; }
+
+  .back-link {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted-dark);
+    opacity: 0.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 2.5rem;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+
+  .eth-stripe {
+    display: flex;
+    gap: 3px;
+    width: 40px;
+    margin-bottom: 1.75rem;
+  }
+  .eth-stripe > div { height: 3px; flex: 1; border-radius: 2px; }
+  .s-green { background: var(--eth-green); }
+  .s-gold  { background: var(--eth-gold); }
+  .s-red   { background: var(--eth-red); }
+
+  .post-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .post-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 400;
+    color: var(--text-on-dark);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .post-desc {
+    font-size: 1.125rem;
+    color: var(--text-muted-dark);
+    line-height: 1.75;
+  }
+
+  /* ── PROSE ── */
+  .section-light { background: var(--cream-card); }
+  .post-body { padding: 5rem 2.5rem; }
+
+  .prose {
+    font-size: 1.0625rem;
+    line-height: 1.9;
+    color: var(--text-on-light);
+  }
+  .prose :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: var(--text-on-light);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .prose :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 400;
+    color: var(--text-on-light);
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose :global(p) {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted-light);
+  }
+  .prose :global(p):first-child { color: var(--text-on-light); }
+  .prose :global(blockquote) {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+    margin: 2.5rem 0;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text-on-light);
+  }
+  .prose :global(a) {
+    color: var(--gold);
+    border-bottom: 1px solid rgba(200, 137, 58, 0.3);
+    transition: border-color 0.2s;
+  }
+  .prose :global(a):hover { border-color: var(--gold); }
+  .prose :global(strong) { color: var(--text-on-light); font-weight: 600; }
+  .prose :global(em) { font-style: italic; }
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(30, 16, 10, 0.15);
+    margin: 3rem 0;
+  }
+  .prose :global(ul), .prose :global(ol) {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .prose :global(li) {
+    color: var(--text-muted-light);
+    margin-bottom: 0.5rem;
+  }
+  .prose :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: rgba(30, 16, 10, 0.07);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+  }
+
+  /* ── NAV FOOTER ── */
+  .post-footer-nav {
+    padding: 2.5rem 2.5rem 3rem;
+    border-top: 1px solid rgba(30, 16, 10, 0.1);
+  }
+  .back-full {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-muted-light);
+    transition: color 0.2s;
+  }
+  .back-full:hover { color: var(--gold); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--espresso);
+    border-top: 1px solid rgba(240, 232, 216, 0.07);
+    padding: 3rem 2.5rem 2rem;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(240, 232, 216, 0.07);
+    margin-bottom: 1.5rem;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-id { display: flex; flex-direction: column; gap: 0.3rem; }
+  .footer-name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--cream);
+  }
+  .footer-meta {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--text-muted-dark);
+  }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a {
+    font-size: 0.875rem;
+    color: var(--text-muted-dark);
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-bottom {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: rgba(240, 232, 216, 0.2);
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .post-header { padding: 3rem 1.5rem 4rem; }
+    .post-body { padding: 3rem 1.5rem; }
+    .page-nav { padding: 1rem 1.5rem; }
+    .footer-inner { flex-direction: column; gap: 1.5rem; }
+  }
+</style>
