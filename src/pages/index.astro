@@ -52,19 +52,9 @@ import Layout from '../layouts/Layout.astro';
         <!-- Direct address -->
         <p class="hero-hi">Hi.</p>
         <h1 class="hero-name">I'm David Melesse.</h1>
+
         <p class="hero-becoming">Becoming who I am.</p>
         <p class="hero-studying">Studying Computer Science, Data Analytics & Philosophy @ Westmont</p>
-
-        <!--
-          Hover over underlined words — there's more there.
-        -->
-        <p class="hero-bio">
-          Builder. <span class="peek" data-peek="CS + Data Analytics · Westmont College">Student</span>.
-          <span class="peek" data-peek="Born from a culture where coffee is ceremony.">Ethiopian</span>.
-          Person of faith.<br />
-          Co-founding <span class="peek" data-peek="Christ-centered nanny placement. Launching soon.">LittleLamb</span> and thinking
-          about what <span class="peek" data-peek="Seriously. It's the question.">AI says about being human</span>.
-        </p>
 
         <p class="hero-guide">If you're curious about the thinking — start with the writing.</p>
 
@@ -87,9 +77,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="project-grid">
 
         <a href="/projects" class="card card-featured">
-          <div class="card-img">
-            <!-- Replace div with <img src="..." alt="..." /> when ready -->
-            <span class="card-img-ghost">LittleLamb</span>
+          <div class="card-img card-img-logo">
+            <img src="/littlelamb.png" alt="LittleLamb Nannies" class="card-img-real" />
           </div>
           <div class="card-body">
             <span class="tag tag-crimson">Startup · React + Firebase</span>
@@ -302,11 +291,12 @@ import Layout from '../layouts/Layout.astro';
 
   .hero-becoming {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-style: italic;
     color: var(--text-muted-dark);
     line-height: 1.4;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.375rem;
+    margin-top: 0.25rem;
   }
   .hero-studying {
     font-family: var(--font-mono);
@@ -315,7 +305,7 @@ import Layout from '../layouts/Layout.astro';
     opacity: 0.55;
     letter-spacing: 0.03em;
     line-height: 1.5;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   /* Name — the 3rd wall break starts here */
@@ -472,12 +462,15 @@ import Layout from '../layouts/Layout.astro';
     justify-content: center;
     flex-shrink: 0;
   }
-  .card-img-ghost {
-    font-family: var(--font-display);
-    font-size: 2.25rem;
-    font-style: italic;
-    color: rgba(200, 137, 58, 0.28);
-    user-select: none;
+  .card-img-logo {
+    background: #F5F0E8;
+    padding: 1.5rem;
+  }
+  .card-img-real {
+    width: auto;
+    height: 100%;
+    max-height: 130px;
+    object-fit: contain;
   }
   .card-body { padding: 1.75rem; }
   .card-sm   { padding: 1.75rem; }

@@ -299,6 +299,7 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2.5rem;
   }
   .project-img-wrap-light {
     background: #F5F0E8;
@@ -308,19 +309,23 @@ import Layout from '../layouts/Layout.astro';
   }
   .project-img-wrap-cover {
     background: #1A1208;
+    padding: 0;
   }
   .project-img {
-    width: 100%;
-    height: 100%;
     display: block;
-  }
-  .project-img-contain {
-    object-fit: contain;
-    padding: 2rem;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
   .project-img-cover {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center top;
+    image-rendering: auto;
   }
 
   .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
