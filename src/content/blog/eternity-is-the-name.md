@@ -1,5 +1,5 @@
 ---
-title: "Eternity Is the Name"
+title: "Eternity"
 date: 2026-06-22
 description: "Heaven is clouds and harps. Hell is fire and brimstone. Both feel abstract enough that neither one lands with any real weight. The original concept is stranger and more specific than that."
 category: faith
