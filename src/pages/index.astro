@@ -10,7 +10,9 @@ import Layout from '../layouts/Layout.astro';
     <!-- Photo panel -->
     <div class="hero-photo">
       <div class="logo-float">
-        <a href="/" class="logo" aria-label="Home">DM</a>
+        <a href="/" class="logo" aria-label="Home">
+          <img src="/lion.png" alt="Lion of Judah" class="logo-lion" />
+        </a>
       </div>
       <img
         src="/david.jpg"
@@ -97,8 +99,8 @@ import Layout from '../layouts/Layout.astro';
           </a>
           <a href="/blog" class="card card-sm card-dark">
             <span class="tag tag-gold">Writing</span>
-            <h3>The Book</h3>
-            <p>At the intersection of AI, philosophy, and the human condition. The argument is forming.</p>
+            <h3>The Fall of AI</h3>
+            <p>God's Creation of AI. At the intersection of AI, philosophy, and the human condition. The argument is forming.</p>
             <span class="card-link">Read the thinking →</span>
           </a>
         </div>
@@ -116,10 +118,26 @@ import Layout from '../layouts/Layout.astro';
         <span class="eyebrow eyebrow-gold">Latest writing</span>
         <a href="/blog" class="see-all">All posts →</a>
       </div>
-      <div class="writing-list">
-        <div class="writing-empty">
-          <p>First post coming. Accumulating the argument.</p>
+      <div class="writing-grid">
+
+        <a href="/projects" class="card card-featured card-dark-featured">
+          <div class="card-img card-img-book">
+            <img src="/book.png" alt="The Fall of AI" class="card-img-real card-img-cover" />
+          </div>
+          <div class="card-body">
+            <span class="tag tag-gold">Book · Philosophy</span>
+            <h3 class="card-title-dark">The Fall of AI</h3>
+            <p class="card-p-dark">God's Creation of AI. At the intersection of artificial intelligence, philosophy, and the human condition. The argument is forming.</p>
+            <span class="card-link">Read the thinking →</span>
+          </div>
+        </a>
+
+        <div class="writing-list">
+          <div class="writing-empty">
+            <p>First post coming. Accumulating the argument.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -200,15 +218,19 @@ import Layout from '../layouts/Layout.astro';
     z-index: 10;
   }
   .logo {
-    font-family: var(--font-mono);
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: var(--cream);
-    letter-spacing: 0.04em;
-    text-shadow: 0 1px 10px rgba(17, 10, 6, 0.6);
-    transition: color 0.2s;
+    display: block;
+    transition: transform 0.2s, filter 0.2s;
+    filter: drop-shadow(0 2px 8px rgba(17, 10, 6, 0.5));
   }
-  .logo:hover { color: var(--gold); }
+  .logo:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 2px 12px rgba(200, 137, 58, 0.4));
+  }
+  .logo-lion {
+    width: 52px;
+    height: auto;
+    display: block;
+  }
 
   /* Text panel */
   .hero-text {
@@ -519,6 +541,30 @@ import Layout from '../layouts/Layout.astro';
   .card:hover .card-link { opacity: 0.65; }
 
   /* ── WRITING ── */
+  .writing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .card-dark-featured {
+    background: var(--dark-roast);
+    border-color: rgba(200, 137, 58, 0.12);
+  }
+  .card-dark-featured:hover { border-color: rgba(200, 137, 58, 0.35); }
+  .card-img-book {
+    background: #1A1208;
+    padding: 0;
+  }
+  .card-img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .card-title-dark { color: var(--text-on-dark) !important; }
+  .card-p-dark { color: var(--text-muted-dark) !important; }
+
   .writing-head {
     display: flex;
     align-items: baseline;
@@ -623,6 +669,7 @@ import Layout from '../layouts/Layout.astro';
     .hero-photo { min-height: 55vh; }
     .hero-text  { padding: 2rem 2rem 3rem; }
     .project-grid { grid-template-columns: 1fr; }
+    .writing-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
     .hero-text { padding: 1.75rem 1.5rem 2.5rem; }
