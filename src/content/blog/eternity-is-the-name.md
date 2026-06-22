@@ -1,17 +1,9 @@
 ---
 title: "Eternity"
 date: 2026-06-22
-description: "Heaven is clouds and harps. Hell is fire and brimstone. Both feel abstract enough that neither one lands with any real weight. The original concept is stranger and more specific than that."
+description: "I went abroad last spring not expecting much beyond travel. I didn't expect to fall in love. Nonetheless, I became a passport bro. Her name was Xristina."
 category: faith
 draft: false
----
-
-Eternity gets flattened in modern Christianity. Heaven is clouds and harps. Hell is fire and brimstone. Both feel abstract enough that neither one lands with any real weight.
-
-But the original concept is stranger and more specific than that.
-
-The biblical framework for eternity isn't primarily about duration. It's about proximity. Heaven is an eternity spent in the presence of God. Hell is an eternity spent away from him. Two states of being, infinitely sustained. What that means for the actual experience of time is something I didn't understand until I spent a semester in Greece.
-
 ---
 
 I went abroad last spring not expecting much beyond travel. I didn't expect to fall in love. Nonetheless, I became a passport bro. Her name was Xristina. Our first date we went for coffee and sat so long it turned into drinks, then dinner. Day turned to night before either of us noticed — six hours, gone in what felt like one.
@@ -19,6 +11,12 @@ I went abroad last spring not expecting much beyond travel. I didn't expect to f
 That became the benchmark. Every date after that, six hours minimum, and every one of them felt instant.
 
 This is what presence does to time. When you are fully with someone, caught in the spell of them, time stops functioning the way it normally does. You are not watching the clock because you don't need to. You are already somewhere better than the next moment.
+
+---
+
+Eternity gets flattened in modern Christianity. Heaven is clouds and harps. Hell is fire and brimstone. Both feel abstract enough that neither one lands with any real weight.
+
+But the original concept is stranger and more specific than that. The biblical framework for eternity isn't primarily about duration. It's about proximity. Heaven is an eternity spent in the presence of God. Hell is an eternity spent away from him. Two states of being, infinitely sustained.
 
 That is the biblical picture of heaven. Not clouds. Not harps. Eternity with God described as an unending moment — the weight of his presence so complete that time doesn't register the way it usually does. Always happening. Never passing.
 
