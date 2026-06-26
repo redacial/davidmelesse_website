@@ -128,15 +128,11 @@ function formatDate(date: Date) {
       </div>
       <div class="writing-grid">
 
-        <a href="/blog" class="card card-featured card-dark-featured">
-          <div class="card-img card-img-book">
-            <img src="/book.png" alt="The Fall of AI" class="card-img-book-full" />
-          </div>
-          <div class="card-body">
-            <span class="tag tag-gold">Book · Philosophy</span>
-            <h3 class="card-title-dark">The Fall of AI</h3>
-            <p class="card-p-dark">God's Creation of AI. At the intersection of artificial intelligence, philosophy, and the human condition. The argument is forming.</p>
-            <span class="card-link">Read the thinking →</span>
+        <a href="/blog" class="fallai-card">
+          <img src="/book.png" alt="The Fall of AI" class="fallai-img" />
+          <div class="fallai-text">
+            <h3 class="fallai-title">The Fall of AI</h3>
+            <span class="fallai-link">Read the thinking →</span>
           </div>
         </a>
 
@@ -707,13 +703,48 @@ function formatDate(date: Date) {
     color: rgba(240, 232, 216, 0.2);
   }
 
-  /* ── BOOK IMAGE: full bleed ── */
-  .card-img-book-full {
+  /* ── FALL OF AI CARD ── */
+  .fallai-card {
+    display: block;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(200, 137, 58, 0.12);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+    min-height: 300px;
+  }
+  .fallai-card:hover {
+    border-color: rgba(200, 137, 58, 0.4);
+    transform: translateY(-3px);
+  }
+  .fallai-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
     display: block;
+    position: absolute;
+    inset: 0;
+  }
+  .fallai-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.75rem;
+  }
+  .fallai-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .fallai-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gold);
   }
 
   /* ── SNEAK PEAK CARD ── */
@@ -755,11 +786,10 @@ function formatDate(date: Date) {
     padding: 1.75rem;
   }
   .sneak-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.625rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold);
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-style: italic;
+    color: var(--cream);
   }
 
   /* ── RESPONSIVE ── */
