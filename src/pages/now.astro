@@ -28,8 +28,8 @@ import Layout from '../layouts/Layout.astro';
           <span class="now-dot" aria-hidden="true"></span>
           <span class="status-text">Summer 2026</span>
         </div>
-        <p class="page-lede">Right now, specifically.</p>
-        <h1 class="page-title">Now</h1>
+        <p class="page-lede">right now, specifically.</p>
+        <h1 class="page-title">now</h1>
       </div>
     </section>
 
@@ -41,23 +41,23 @@ import Layout from '../layouts/Layout.astro';
         <div class="now-main">
 
           <div class="now-block">
-            <span class="eyebrow eyebrow-crimson">Building</span>
+            <span class="eyebrow eyebrow-crimson">building</span>
             <h2>LittleLamb Nannies</h2>
-            <p>Co-founding a Christ-centered nanny placement service for families in Santa Barbara. This summer is the shipping window — everything we've designed needs to become something real people can use. We're building onboarding flows, matching logic, and the trust layer underneath it all.</p>
-            <p>Target: launched before September.</p>
+            <p>co-founding a nanny placement service for families in Santa Barbara. this summer is the shipping window — everything we've designed needs to become something real people can use. we're building onboarding flows, matching logic, and the trust layer underneath it all.</p>
+            <p>target: launched before September.</p>
           </div>
 
           <div class="now-block">
-            <span class="eyebrow eyebrow-gold">Working</span>
-            <h2>Interning at CATLab</h2>
-            <p>Westmont's applied tech lab. I'm in an SDR role — donor outreach, cold calls, Salesforce, real conversations with real people about why faith and technology belong together. More educational than I expected. You learn a lot about communication when you can't hide behind a screen.</p>
+            <span class="eyebrow eyebrow-gold">working</span>
+            <h2>interning at CATLab</h2>
+            <p>Westmont's applied tech lab. i'm in an SDR role — donor outreach, cold calls, Salesforce, real conversations with real people about why faith and technology belong together. more educational than i expected. you learn a lot about communication when you can't hide behind a screen.</p>
           </div>
 
           <div class="now-block">
-            <span class="eyebrow eyebrow-gold">Writing</span>
-            <h2>The Argument</h2>
-            <p>I'm working on something long. A book-length argument about AI and what it reveals about what it means to be human. The ideas are forming through the blog — each post is a step toward something bigger. The question driving all of it: what does artificial intelligence say about genuine personhood?</p>
-            <a href="/blog" class="block-link">Read the early thinking →</a>
+            <span class="eyebrow eyebrow-gold">writing</span>
+            <h2>free writing</h2>
+            <p>this isn't anything ground-breaking, just honest thoughts. i want to improve my writing ability, through personal experiences mixed with things of interest. still actively learning, so if you find anything you like, dislike, or have questions about -> reach out!!!</p>
+            <a href="/blog" class="block-link">read the early thinking →</a>
           </div>
 
         </div>
@@ -67,15 +67,12 @@ import Layout from '../layouts/Layout.astro';
 
           <div class="aside-block">
             <span class="aside-label">Reading</span>
-            <ul class="aside-list">
-              <li>Whatever helps me think about AI and consciousness</li>
-              <li>Scripture — always</li>
-            </ul>
+            <p class="aside-note">whatever looks interesting</p>
           </div>
 
           <div class="aside-block">
             <span class="aside-label">Drinking</span>
-            <p class="aside-note">Too much coffee. Ethiopian, ideally — the kind that's ceremony, not caffeine delivery.</p>
+            <p class="aside-note">water + caffeine</p>
           </div>
 
           <div class="aside-block">
@@ -84,17 +81,27 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="aside-block">
-            <span class="aside-label">Studying</span>
-            <p class="aside-note">CS + Data Analytics at Westmont College. Class of 2027.</p>
+            <span class="aside-label">studying</span>
+            <div class="studying-brace">
+              <ul class="studying-list">
+                <li>computer science</li>
+                <li>data analytics</li>
+                <li>philosophy</li>
+              </ul>
+              <div class="brace-group">
+                <div class="vert-line"></div>
+                <span class="brace-label">@ Westmont '27</span>
+              </div>
+            </div>
           </div>
 
           <div class="aside-block">
             <span class="aside-label">Thinking about</span>
-            <p class="aside-note">What AI says about being human. Whether machines can be creative. The difference between intelligence and personhood.</p>
+            <p class="aside-note">what AI says about being human. whether machines can be creative. the difference between intelligence and personhood.</p>
           </div>
 
           <div class="aside-block aside-block-contact">
-            <span class="aside-label">If you want to talk</span>
+            <span class="aside-label">if you want to talk</span>
             <a href="mailto:melesse.david11@gmail.com" class="contact-link">melesse.david11@gmail.com</a>
             <a href="https://www.linkedin.com/in/david-melesse-ba0166287/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
           </div>
@@ -332,6 +339,44 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.6;
   }
   .aside-block-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .studying-brace {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .studying-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .studying-list li {
+    font-size: 0.9375rem;
+    color: var(--text-on-light);
+    line-height: 1.5;
+  }
+  .brace-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.375rem;
+    align-self: stretch;
+  }
+  .vert-line {
+    width: 1.5px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background: var(--text-on-light);
+    border-radius: 2px;
+  }
+  .brace-label {
+    font-size: 0.9375rem;
+    color: var(--text-on-light);
+    white-space: nowrap;
+  }
   .contact-link {
     font-size: 0.9375rem;
     color: var(--gold);
