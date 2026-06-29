@@ -55,3 +55,5 @@ The lesson cost Samson his life. It cost me a connection. Those aren't the same 
 The next connection, the next person who says circle back, I'll circle back when I said I would. Not six months later. Not when it's convenient.
 
 When I said I would.
+
+P.S. _____ if you're reading this please give me a second chance!!!
