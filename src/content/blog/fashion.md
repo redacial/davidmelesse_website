@@ -20,6 +20,8 @@ Nothing was broken. Everything was already made perfect. The Garden didn't need 
 
 The reason is older than the story.
 
+Aristotle, in the Categories, lays out four types of opposites. The one that matters here is privation and possession. Sight and blindness. Having and not having. Clothed and bare. You cannot understand one without the other. They require the same subject. Blindness only means something if you know what sight is. The privation only exists in relation to the possession.
+
 Before the fruit, Adam and Eve had no concept of covering. No image of it. No word for it. Which means they had no concept of nakedness either. You cannot feel the absence of something you have never imagined having. The fruit did not create nakedness. It created the capacity to conceive of clothing. And once you hold the possession in mind, the privation follows immediately. They looked down and felt the with and without for the first time.
 
 That is what consciousness is, literally. The Latin conscius: con, meaning together, and scire, to know. Knowing with. The original meaning was knowing something jointly with another person. Then it became knowing with oneself, holding two states in the same mind at once. The moment they could feel both possibilities simultaneously, covered and uncovered, they were conscious. Co-knowing. The fruit didn't open their eyes. It gave them two things to see.
