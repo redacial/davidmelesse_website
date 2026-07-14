@@ -13,44 +13,23 @@ function formatDate(date: Date) {
 
 <Layout title="David Melesse">
 
-  <!-- ═══════ HERO — split layout ═══════ -->
+  <!-- ═══════ HERO — type-led, portrait on the side ═══════ -->
   <section class="hero">
 
-    <!-- Photo panel -->
-    <div class="hero-photo">
-      <div class="logo-float">
-        <a href="/" class="logo" aria-label="Home">DM</a>
-      </div>
-      <img
-        src="/david.jpg"
-        alt="David Melesse"
-        width="900"
-        height="1200"
-      />
-      <!-- Right-edge fade into text panel -->
-      <div class="photo-fade" aria-hidden="true"></div>
+    <!-- Top bar -->
+    <div class="hero-top">
+      <a href="/" class="logo" aria-label="Home">DM</a>
+      <nav class="hero-nav" aria-label="Main navigation">
+        <a href="/projects">Work</a>
+        <a href="/blog">Writing</a>
+        <a href="/now">Now</a>
+      </nav>
     </div>
 
-    <!-- Text panel -->
-    <div class="hero-text">
+    <!-- Main content -->
+    <div class="hero-main">
 
-      <!-- Nav sits at top of text panel -->
-      <nav class="hero-nav" aria-label="Main navigation">
-        <a href="/projects">work</a>
-        <a href="/blog">writing</a>
-        <a href="/now">now</a>
-      </nav>
-
-      <!-- Content anchored to bottom -->
-      <div class="hero-content">
-
-        <!-- Status card -->
-        <div class="now-card">
-          <span class="now-dot" aria-hidden="true"></span>
-          <span class="now-label">Summer 2026</span>
-          <p class="now-text">shipping LittleLamb. interning at CATLab. free writing.</p>
-        </div>
-
+      <div class="hero-copy">
         <!-- Ethiopian stripe — the mark -->
         <div class="eth-stripe" role="img" aria-label="Ethiopian flag colors">
           <div class="s-green"></div>
@@ -58,24 +37,47 @@ function formatDate(date: Date) {
           <div class="s-red"></div>
         </div>
 
-        <!-- Direct address -->
         <p class="hero-hi">Hi.</p>
-        <h1 class="hero-name">i'm David Melesse.</h1>
+        <h1 class="hero-name">I'm David Melesse.</h1>
 
         <ul class="hero-studying-list">
-          <li>computer science</li>
-          <li>data analytics</li>
-          <li>philosophy</li>
+          <li>Computer science</li>
+          <li>Data analytics</li>
+          <li>Philosophy</li>
         </ul>
 
-        <p class="hero-guide">if you're curious about the thinking — start with the writing.</p>
+        <p class="hero-guide">If you're curious about the thinking — start with the writing.</p>
 
         <div class="hero-cta">
-          <a href="/projects" class="cta-primary">the work →</a>
-          <a href="/blog" class="cta-ghost">the writing →</a>
+          <a href="/projects" class="cta-primary">The work →</a>
+          <a href="/blog" class="cta-ghost">The writing →</a>
         </div>
-
       </div>
+
+      <aside class="hero-side">
+        <figure class="hero-portrait">
+          <img
+            src="/david.jpg"
+            alt="David Melesse"
+            width="900"
+            height="1200"
+          />
+        </figure>
+
+        <!-- Status card -->
+        <div class="now-card">
+          <span class="now-dot" aria-hidden="true"></span>
+          <span class="now-label">Summer 2026</span>
+          <p class="now-text">Shipping LittleLamb. Interning at CATLab. Free writing.</p>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>scroll</span>
+      <span class="scroll-arrow">↓</span>
     </div>
 
   </section>
@@ -84,8 +86,8 @@ function formatDate(date: Date) {
   <!-- ═══════ BUILDING ═══════ -->
   <section class="section section-light">
     <div class="inner">
-      <p class="section-lede">the things keeping me busy.</p>
-      <span class="eyebrow eyebrow-crimson">currently building</span>
+      <p class="section-lede">The things keeping me busy.</p>
+      <span class="eyebrow eyebrow-crimson">Currently building</span>
       <div class="project-grid">
 
         <a href="/projects" class="card card-featured">
@@ -93,8 +95,8 @@ function formatDate(date: Date) {
           <div class="card-body">
             <span class="tag tag-crimson">Startup · React + Firebase</span>
             <h3>LittleLamb Nannies</h3>
-            <p>nanny placement for families in Santa Barbara. values-aligned matching. built with care.</p>
-            <span class="card-link">view project →</span>
+            <p>Nanny placement for families in Santa Barbara. Values-aligned matching. Built with care.</p>
+            <span class="card-link">View project →</span>
           </div>
         </a>
 
@@ -102,14 +104,14 @@ function formatDate(date: Date) {
           <a href="/projects" class="card card-sm">
             <span class="tag tag-crimson">Internship</span>
             <h3>CATLab SDR</h3>
-            <p>outreach and donor relations at Westmont's applied tech lab. cold calls, Salesforce, real relationships.</p>
-            <span class="card-link">learn more →</span>
+            <p>Outreach and donor relations at Westmont's applied tech lab. Cold calls, Salesforce, real relationships.</p>
+            <span class="card-link">Learn more →</span>
           </a>
           <a href="/blog" class="card card-sm card-dark">
             <span class="tag tag-gold">Writing</span>
-            <h3>thoughts</h3>
-            <p>most of this isn't certain, just thoughts on things of interest. i hope that if you read something you like, dislike, or are questioning you'll reach out!!!</p>
-            <span class="card-link">read the thinking →</span>
+            <h3>Thoughts</h3>
+            <p>Most of this isn't certain, just thoughts on things of interest. I hope that if you read something you like, dislike, or are questioning you'll reach out!!!</p>
+            <span class="card-link card-link-dark">Read the thinking →</span>
           </a>
         </div>
 
@@ -121,18 +123,19 @@ function formatDate(date: Date) {
   <!-- ═══════ WRITING ═══════ -->
   <section class="section section-dark">
     <div class="inner">
-      <p class="writing-lede">if you want to know how i think, this is the place.</p>
+      <p class="writing-lede">If you want to know how I think, this is the place.</p>
       <div class="writing-head">
-        <span class="eyebrow eyebrow-gold">latest writing</span>
-        <a href="/blog" class="see-all">all posts →</a>
+        <span class="eyebrow eyebrow-gold">Latest writing</span>
+        <a href="/blog" class="see-all">All posts →</a>
       </div>
       <div class="writing-grid">
 
         <a href="/blog" class="fallai-card">
           <img src="/book.png" alt="The Fall of AI" class="fallai-img" />
+          <div class="fallai-overlay" aria-hidden="true"></div>
           <div class="fallai-text">
-            <h3 class="fallai-title">the fall of AI</h3>
-            <span class="fallai-link">read the thinking →</span>
+            <h3 class="fallai-title">The Fall of AI</h3>
+            <span class="fallai-link">Read the thinking →</span>
           </div>
         </a>
 
@@ -142,7 +145,7 @@ function formatDate(date: Date) {
             <div class="sneak-overlay"></div>
           </div>
           <div class="sneak-label">
-            <span class="sneak-eyebrow">sneak peak</span>
+            <span class="sneak-eyebrow">Sneak peak</span>
           </div>
         </a>
 
@@ -155,12 +158,12 @@ function formatDate(date: Date) {
   <section class="section section-medium">
     <div class="inner">
       <div class="quote-block">
-        <span class="eyebrow eyebrow-gold">right now, specifically</span>
-        <blockquote>concept → execution.</blockquote>
+        <span class="eyebrow eyebrow-gold">Right now, specifically</span>
+        <blockquote>Concept → execution.</blockquote>
         <p class="quote-sub">
-          shipping LittleLamb. interning at CATLab. free writing.
+          Shipping LittleLamb. Interning at CATLab. Free writing.
         </p>
-        <a href="/now" class="now-full-link">the full picture →</a>
+        <a href="/now" class="now-full-link">The full picture →</a>
       </div>
     </div>
   </section>
@@ -188,40 +191,25 @@ function formatDate(date: Date) {
 
 
 <style>
-  /* ── HERO: SPLIT ── */
+  /* ── HERO — type leads, photo supports, next section peeks below ── */
   .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-  }
-
-  /* Photo */
-  .hero-photo {
+    /* 88svh leaves the top of the next section visible in the first viewport */
+    min-height: 88vh;
+    min-height: 88svh;
+    background: var(--espresso);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem 1.5rem;
     position: relative;
-    overflow: hidden;
-    background: #C4B89A;
-  }
-  .hero-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 8%;
-    display: block;
-    filter: sepia(0.06) saturate(1.05);
-  }
-  .photo-fade {
-    position: absolute;
-    top: 0; right: 0; bottom: 0;
-    width: 140px;
-    background: linear-gradient(to right, transparent, var(--espresso));
   }
 
-  /* DM logo floats over photo, top-left */
-  .logo-float {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    z-index: 10;
+  .hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
   }
   .logo {
     font-family: var(--font-mono);
@@ -229,52 +217,137 @@ function formatDate(date: Date) {
     font-weight: 700;
     color: var(--cream);
     letter-spacing: 0.04em;
-    text-shadow: 0 1px 10px rgba(17, 10, 6, 0.6);
     transition: color 0.2s;
   }
   .logo:hover { color: var(--gold); }
 
-  /* Text panel */
-  .hero-text {
-    background: var(--espresso);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2.5rem 3rem 4rem;
-    position: relative;
-  }
-
-  /* Nav: top of text panel */
-  .hero-nav {
-    display: flex;
-    gap: 2rem;
-    align-self: flex-start;
-  }
+  .hero-nav { display: flex; gap: 2rem; }
   .hero-nav a {
     font-family: var(--font-mono);
     font-size: 0.8125rem;
-    color: var(--text-on-dark);
-    opacity: 0.45;
+    color: var(--text-muted-dark);
     letter-spacing: 0.05em;
-    transition: opacity 0.2s;
+    transition: color 0.2s;
   }
-  .hero-nav a:hover { opacity: 1; }
+  .hero-nav a:hover { color: var(--cream); }
 
-  /* Content: bottom of text panel */
-  .hero-content { display: flex; flex-direction: column; }
+  /* Main: copy dominates, portrait sits aside */
+  .hero-main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) auto;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+  }
+
+  .hero-copy { display: flex; flex-direction: column; }
+
+  /* Ethiopian stripe */
+  .eth-stripe {
+    display: flex;
+    gap: 3px;
+    width: 50px;
+    margin-bottom: 1.75rem;
+  }
+  .eth-stripe > div { height: 3px; flex: 1; border-radius: 2px; }
+  .s-green { background: var(--eth-green); }
+  .s-gold  { background: var(--eth-gold); }
+  .s-red   { background: var(--eth-red); }
+
+  .hero-hi {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.375rem;
+  }
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 400;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+
+  .hero-studying-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .hero-studying-list li {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-muted-dark);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-guide {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-muted-dark);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 34ch;
+  }
+
+  /* CTAs */
+  .hero-cta { display: flex; align-items: center; gap: 2rem; }
+  .cta-primary {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gold);
+    border-bottom: 1px solid rgba(200, 137, 58, 0.35);
+    padding-bottom: 3px;
+    transition: border-color 0.2s;
+  }
+  .cta-primary:hover { border-color: var(--gold); }
+  .cta-ghost {
+    font-size: 1rem;
+    color: var(--text-muted-dark);
+    transition: color 0.2s;
+  }
+  .cta-ghost:hover { color: var(--text-on-dark); }
+
+  /* Portrait — contained, not a half-screen panel */
+  .hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: clamp(200px, 24vw, 300px);
+  }
+  .hero-portrait {
+    margin: 0;
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(200, 137, 58, 0.25);
+  }
+  .hero-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 8%;
+    filter: sepia(0.06) saturate(1.05);
+  }
 
   /* Status card */
   .now-card {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     gap: 0.35rem;
     background: var(--dark-roast);
     border: 1px solid rgba(200, 137, 58, 0.18);
     border-radius: 8px;
     padding: 0.875rem 1.125rem;
-    max-width: 265px;
-    margin-bottom: 2.5rem;
-    align-self: flex-start;
   }
   .now-dot {
     display: inline-block;
@@ -290,7 +363,7 @@ function formatDate(date: Date) {
   }
   .now-label {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
+    font-size: 0.6875rem;
     color: var(--gold);
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -301,126 +374,27 @@ function formatDate(date: Date) {
     line-height: 1.55;
   }
 
-  /* Ethiopian stripe */
-  .eth-stripe {
+  /* Scroll cue */
+  .hero-scroll {
     display: flex;
-    gap: 3px;
-    width: 50px;
-    margin-bottom: 1.5rem;
-  }
-  .eth-stripe > div { height: 3px; flex: 1; border-radius: 2px; }
-  .s-green { background: var(--eth-green); }
-  .s-gold  { background: var(--eth-gold); }
-  .s-red   { background: var(--eth-red); }
-
-  .hero-studying-list {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0 2.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-  .hero-studying-list li {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    color: var(--text-muted-dark);
-    opacity: 0.45;
-    letter-spacing: 0.04em;
-  }
-  .card-img-plain {
-    background: linear-gradient(145deg, #2C180F 0%, #1A0F0A 55%, #3A200F 100%);
-  }
-
-  /* Name — the 3rd wall break starts here */
-  .hero-hi {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 6.5vw, 5.5rem);
-    font-style: italic;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 0.375rem;
-  }
-  .hero-name {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: 400;
-    color: var(--cream);
-    line-height: 1.2;
-    margin-bottom: 0;
-  }
-
-  /* Bio with hover peeks */
-  .hero-bio {
-    font-size: 1rem;
-    color: var(--text-muted-dark);
-    line-height: 1.85;
-    margin-bottom: 0.875rem;
-  }
-
-  /* ── THE PEEK SYSTEM — hover reveals ── */
-  .peek {
-    position: relative;
-    border-bottom: 1px dashed rgba(200, 137, 58, 0.4);
-    cursor: help;
-    transition: color 0.15s;
-  }
-  .peek:hover { color: var(--gold-light); }
-
-  /* Tooltip via CSS attr() — no JS */
-  .peek::after {
-    content: attr(data-peek);
-    position: absolute;
-    bottom: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%) translateY(5px);
-    background: var(--dark-roast);
-    border: 1px solid rgba(200, 137, 58, 0.22);
-    border-radius: 6px;
-    padding: 0.5rem 0.875rem;
-    font-size: 0.8125rem;
-    font-family: var(--font-body);
-    font-style: normal;
-    font-weight: 400;
-    color: var(--cream);
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 50;
-    transition: opacity 0.2s, transform 0.2s;
-  }
-  .peek:hover::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-
-  /* Guide line */
-  .hero-guide {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--text-muted-dark);
-    opacity: 0.6;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint-dark);
+    padding-bottom: 0.5rem;
   }
-
-  /* CTAs */
-  .hero-cta { display: flex; align-items: center; gap: 2rem; }
-  .cta-primary {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    color: var(--gold);
-    border-bottom: 1px solid rgba(200, 137, 58, 0.35);
-    padding-bottom: 3px;
-    transition: border-color 0.2s;
+  .scroll-arrow {
+    display: inline-block;
+    animation: drift 2s ease-in-out infinite;
   }
-  .cta-primary:hover { border-color: var(--gold); }
-  .cta-ghost {
-    font-size: 0.9375rem;
-    color: var(--text-muted-dark);
-    transition: color 0.2s;
+  @keyframes drift {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(4px); }
   }
-  .cta-ghost:hover { color: var(--text-on-dark); }
 
   /* ── SECTIONS ── */
   .section { padding: 6rem 2.5rem; }
@@ -450,7 +424,7 @@ function formatDate(date: Date) {
   .eyebrow {
     display: block;
     font-family: var(--font-mono);
-    font-size: 0.625rem;
+    font-size: 0.6875rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
@@ -486,15 +460,8 @@ function formatDate(date: Date) {
     justify-content: center;
     flex-shrink: 0;
   }
-  .card-img-logo {
-    background: #F5F0E8;
-    padding: 1.5rem;
-  }
-  .card-img-real {
-    width: auto;
-    height: 100%;
-    max-height: 130px;
-    object-fit: contain;
+  .card-img-plain {
+    background: linear-gradient(145deg, #2C180F 0%, #1A0F0A 55%, #3A200F 100%);
   }
   .card-body { padding: 1.75rem; }
   .card-sm   { padding: 1.75rem; }
@@ -511,7 +478,7 @@ function formatDate(date: Date) {
   .tag {
     display: inline-block;
     font-family: var(--font-mono);
-    font-size: 0.5625rem;
+    font-size: 0.6875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
@@ -532,24 +499,16 @@ function formatDate(date: Date) {
     color: var(--text-muted-light);
     line-height: 1.7;
   }
-  .card-subtitle {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    letter-spacing: 0.04em;
-    color: var(--gold-light);
-    opacity: 0.7;
-    margin-top: -0.25rem;
-    margin-bottom: 0.625rem;
-  }
   .card-link {
     display: inline-block;
     margin-top: 1.25rem;
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--gold);
+    color: var(--gold-deep);
     transition: opacity 0.2s;
   }
-  .card:hover .card-link { opacity: 0.65; }
+  .card-link-dark { color: var(--gold); }
+  .card:hover .card-link { opacity: 0.75; }
 
   /* ── WRITING ── */
   .writing-grid {
@@ -558,23 +517,6 @@ function formatDate(date: Date) {
     gap: 1.5rem;
     align-items: start;
   }
-  .card-dark-featured {
-    background: var(--dark-roast);
-    border-color: rgba(200, 137, 58, 0.12);
-  }
-  .card-dark-featured:hover { border-color: rgba(200, 137, 58, 0.35); }
-  .card-img-book {
-    background: #1A1208;
-    padding: 0;
-  }
-  .card-img-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-  .card-title-dark { color: var(--text-on-dark) !important; }
-  .card-p-dark { color: var(--text-muted-dark) !important; }
 
   .writing-head {
     display: flex;
@@ -585,53 +527,11 @@ function formatDate(date: Date) {
   .writing-head .eyebrow-gold { margin-bottom: 0; }
   .see-all {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     color: var(--gold);
-    opacity: 0.75;
-    transition: opacity 0.2s;
+    transition: color 0.2s;
   }
-  .see-all:hover { opacity: 1; }
-  .writing-list { border-top: 1px solid rgba(240, 232, 216, 0.1); }
-  .writing-empty {
-    padding: 2.5rem 0;
-    border-bottom: 1px solid rgba(240, 232, 216, 0.1);
-  }
-  .writing-empty p {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--text-muted-dark);
-  }
-  .writing-item {
-    display: block;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(240, 232, 216, 0.1);
-    transition: opacity 0.2s;
-  }
-  .writing-item:hover { opacity: 0.7; }
-  .writing-item-date {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.5625rem;
-    letter-spacing: 0.08em;
-    color: var(--text-muted-dark);
-    opacity: 0.5;
-    text-transform: uppercase;
-    margin-bottom: 0.375rem;
-  }
-  .writing-item-title {
-    font-family: var(--font-display);
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: var(--text-on-dark);
-    line-height: 1.25;
-    margin-bottom: 0.375rem;
-  }
-  .writing-item-desc {
-    font-size: 0.875rem;
-    color: var(--text-muted-dark);
-    line-height: 1.6;
-  }
+  .see-all:hover { color: var(--gold-light); }
 
   /* ── QUOTE / NOW ── */
   .quote-block { max-width: 600px; }
@@ -685,7 +585,7 @@ function formatDate(date: Date) {
   }
   .footer-meta {
     font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     color: var(--text-muted-dark);
   }
   .footer-links { display: flex; gap: 2rem; }
@@ -697,9 +597,8 @@ function formatDate(date: Date) {
   .footer-links a:hover { color: var(--cream); }
   .footer-bottom {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
-    color: rgba(240, 232, 216, 0.2);
-    text-transform: lowercase;
+    font-size: 0.75rem;
+    color: var(--text-faint-dark);
   }
 
   /* ── FALL OF AI CARD ── */
@@ -725,6 +624,11 @@ function formatDate(date: Date) {
     position: absolute;
     inset: 0;
   }
+  .fallai-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(17, 10, 6, 0.88) 0%, rgba(17, 10, 6, 0.25) 45%, transparent 100%);
+  }
   .fallai-text {
     position: absolute;
     bottom: 0;
@@ -743,7 +647,7 @@ function formatDate(date: Date) {
   .fallai-link {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--gold);
+    color: var(--gold-light);
   }
 
   /* ── SNEAK PEAK CARD ── */
@@ -793,19 +697,29 @@ function formatDate(date: Date) {
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    .hero {
+    .hero { padding: 1.75rem 2rem 1.25rem; }
+    .hero-main {
       grid-template-columns: 1fr;
-      grid-template-rows: 55vh auto;
+      gap: 2.5rem;
+      padding: 2rem 0;
     }
-    .hero-photo { min-height: 55vh; }
-    .hero-text  { padding: 2rem 2rem 3rem; }
+    .hero-side {
+      width: 100%;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 1.25rem;
+    }
+    .hero-portrait { width: clamp(150px, 38vw, 220px); flex-shrink: 0; }
+    .now-card { flex: 1; }
     .project-grid { grid-template-columns: 1fr; }
     .writing-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
-    .hero-text { padding: 1.75rem 1.5rem 2.5rem; }
+    .hero { padding: 1.5rem 1.5rem 1rem; }
     .section   { padding: 4rem 1.5rem; }
     .hero-cta  { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .hero-side { flex-direction: column; align-items: stretch; }
+    .hero-portrait { width: clamp(150px, 45vw, 200px); }
     .writing-head { flex-direction: column; gap: 0.75rem; align-items: flex-start; }
     .footer-inner { flex-direction: column; gap: 1.5rem; }
   }

@@ -8,9 +8,9 @@ import Layout from '../layouts/Layout.astro';
     <nav class="page-nav">
       <a href="/" class="logo">DM</a>
       <div class="nav-links">
-        <a href="/projects">work</a>
-        <a href="/blog">writing</a>
-        <a href="/now" class="active">now</a>
+        <a href="/projects">Work</a>
+        <a href="/blog">Writing</a>
+        <a href="/now" class="active">Now</a>
       </div>
     </nav>
   </header>
@@ -28,8 +28,8 @@ import Layout from '../layouts/Layout.astro';
           <span class="now-dot" aria-hidden="true"></span>
           <span class="status-text">Summer 2026</span>
         </div>
-        <p class="page-lede">right now, specifically.</p>
-        <h1 class="page-title">now</h1>
+        <p class="page-lede">Right now, specifically.</p>
+        <h1 class="page-title">Now</h1>
       </div>
     </section>
 
@@ -41,23 +41,23 @@ import Layout from '../layouts/Layout.astro';
         <div class="now-main">
 
           <div class="now-block">
-            <span class="eyebrow eyebrow-crimson">building</span>
+            <span class="eyebrow eyebrow-crimson">Building</span>
             <h2>LittleLamb Nannies</h2>
-            <p>co-founding a nanny placement service for families in Santa Barbara. this summer is the shipping window — everything we've designed needs to become something real people can use. we're building onboarding flows, matching logic, and the trust layer underneath it all.</p>
-            <p>target: launched before September.</p>
+            <p>Co-founding a nanny placement service for families in Santa Barbara. This summer is the shipping window — everything we've designed needs to become something real people can use. We're building onboarding flows, matching logic, and the trust layer underneath it all.</p>
+            <p>Target: launched before September.</p>
           </div>
 
           <div class="now-block">
-            <span class="eyebrow eyebrow-gold">working</span>
-            <h2>interning at CATLab</h2>
-            <p>Westmont's applied tech lab. i'm in an SDR role — donor outreach, cold calls, Salesforce, real conversations with real people about why faith and technology belong together. more educational than i expected. you learn a lot about communication when you can't hide behind a screen.</p>
+            <span class="eyebrow eyebrow-gold">Working</span>
+            <h2>Interning at CATLab</h2>
+            <p>Westmont's applied tech lab. I'm in an SDR role — donor outreach, cold calls, Salesforce, real conversations with real people about why faith and technology belong together. More educational than I expected. You learn a lot about communication when you can't hide behind a screen.</p>
           </div>
 
           <div class="now-block">
-            <span class="eyebrow eyebrow-gold">writing</span>
-            <h2>free writing</h2>
-            <p>this isn't anything ground-breaking, just honest thoughts. i want to improve my writing ability, through personal experiences mixed with things of interest. still actively learning, so if you find anything you like, dislike, or have questions about -> reach out!!!</p>
-            <a href="/blog" class="block-link">read the early thinking →</a>
+            <span class="eyebrow eyebrow-gold">Writing</span>
+            <h2>Free writing</h2>
+            <p>This isn't anything ground-breaking, just honest thoughts. I want to improve my writing ability, through personal experiences mixed with things of interest. Still actively learning, so if you find anything you like, dislike, or have questions about -> reach out!!!</p>
+            <a href="/blog" class="block-link">Read the early thinking →</a>
           </div>
 
         </div>
@@ -67,12 +67,12 @@ import Layout from '../layouts/Layout.astro';
 
           <div class="aside-block">
             <span class="aside-label">Reading</span>
-            <p class="aside-note">whatever looks interesting</p>
+            <p class="aside-note">Whatever looks interesting</p>
           </div>
 
           <div class="aside-block">
             <span class="aside-label">Drinking</span>
-            <p class="aside-note">water + caffeine</p>
+            <p class="aside-note">Water + caffeine</p>
           </div>
 
           <div class="aside-block">
@@ -81,12 +81,12 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="aside-block">
-            <span class="aside-label">studying</span>
+            <span class="aside-label">Studying</span>
             <div class="studying-brace">
               <ul class="studying-list">
-                <li>computer science</li>
-                <li>data analytics</li>
-                <li>philosophy</li>
+                <li>Computer science</li>
+                <li>Data analytics</li>
+                <li>Philosophy</li>
               </ul>
               <div class="brace-group">
                 <div class="vert-line"></div>
@@ -97,11 +97,11 @@ import Layout from '../layouts/Layout.astro';
 
           <div class="aside-block">
             <span class="aside-label">Thinking about</span>
-            <p class="aside-note">what AI says about being human. whether machines can be creative. the difference between intelligence and personhood.</p>
+            <p class="aside-note">What AI says about being human. Whether machines can be creative. The difference between intelligence and personhood.</p>
           </div>
 
           <div class="aside-block aside-block-contact">
-            <span class="aside-label">if you want to talk</span>
+            <span class="aside-label">If you want to talk</span>
             <a href="mailto:melesse.david11@gmail.com" class="contact-link">melesse.david11@gmail.com</a>
             <a href="https://www.linkedin.com/in/david-melesse-ba0166287/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
           </div>
@@ -167,7 +167,7 @@ import Layout from '../layouts/Layout.astro';
     font-family: var(--font-mono);
     font-size: 0.8125rem;
     color: var(--text-on-dark);
-    opacity: 0.4;
+    opacity: 0.7;
     letter-spacing: 0.05em;
     transition: opacity 0.2s;
   }
@@ -255,13 +255,14 @@ import Layout from '../layouts/Layout.astro';
   .eyebrow {
     display: block;
     font-family: var(--font-mono);
-    font-size: 0.625rem;
+    font-size: 0.6875rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
   .eyebrow-crimson { color: var(--crimson); }
-  .eyebrow-gold    { color: var(--gold); }
+  /* gold-deep: this page's eyebrows sit on cream, where --gold fails contrast */
+  .eyebrow-gold    { color: var(--gold-deep); }
 
   .now-block h2 {
     font-family: var(--font-display);
@@ -284,12 +285,12 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 1rem;
     font-family: var(--font-mono);
     font-size: 0.8125rem;
-    color: var(--gold);
-    border-bottom: 1px solid rgba(200, 137, 58, 0.3);
+    color: var(--gold-deep);
+    border-bottom: 1px solid rgba(138, 90, 27, 0.35);
     padding-bottom: 3px;
     transition: border-color 0.2s;
   }
-  .block-link:hover { border-color: var(--gold); }
+  .block-link:hover { border-color: var(--gold-deep); }
 
   /* Aside */
   .now-aside {
@@ -307,7 +308,7 @@ import Layout from '../layouts/Layout.astro';
   .aside-label {
     display: block;
     font-family: var(--font-mono);
-    font-size: 0.5625rem;
+    font-size: 0.6875rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-muted-light);
@@ -379,16 +380,15 @@ import Layout from '../layouts/Layout.astro';
   }
   .contact-link {
     font-size: 0.9375rem;
-    color: var(--gold);
+    color: var(--gold-deep);
     transition: opacity 0.2s;
   }
   .contact-link:hover { opacity: 0.7; }
 
   .now-updated {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     color: var(--text-muted-light);
-    opacity: 0.6;
     line-height: 1.6;
     border-top: 1px solid rgba(30, 16, 10, 0.1);
     padding-top: 1.25rem;
@@ -429,8 +429,8 @@ import Layout from '../layouts/Layout.astro';
   .footer-links a:hover { color: var(--cream); }
   .footer-bottom {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
-    color: rgba(240, 232, 216, 0.2);
+    font-size: 0.75rem;
+    color: var(--text-faint-dark);
   }
 
   /* ── RESPONSIVE ── */

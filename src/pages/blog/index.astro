@@ -26,9 +26,9 @@ const categories = Object.keys(categoryLabels);
     <nav class="page-nav">
       <a href="/" class="logo">DM</a>
       <div class="nav-links">
-        <a href="/projects">work</a>
-        <a href="/blog" class="active">writing</a>
-        <a href="/now">now</a>
+        <a href="/projects">Work</a>
+        <a href="/blog" class="active">Writing</a>
+        <a href="/now">Now</a>
       </div>
     </nav>
   </header>
@@ -42,9 +42,9 @@ const categories = Object.keys(categoryLabels);
           <div class="s-gold"></div>
           <div class="s-red"></div>
         </div>
-        <p class="page-lede">if you want to know how i think, this is the place.</p>
-        <h1 class="page-title">writing</h1>
-        <p class="page-sub">working out an argument at the intersection of AI, faith, and what it means to be human. one post at a time.</p>
+        <p class="page-lede">If you want to know how I think, this is the place.</p>
+        <h1 class="page-title">Writing</h1>
+        <p class="page-sub">Working out an argument at the intersection of AI, faith, and what it means to be human. One post at a time.</p>
       </div>
     </section>
 
@@ -61,8 +61,8 @@ const categories = Object.keys(categoryLabels);
 
         {posts.length === 0 ? (
           <div class="empty-state">
-            <p class="empty-main">first post coming.</p>
-            <p class="empty-sub">accumulating the argument.</p>
+            <p class="empty-main">First post coming.</p>
+            <p class="empty-sub">Accumulating the argument.</p>
           </div>
         ) : (
           <ul class="post-list" role="list" id="post-list">
@@ -162,7 +162,7 @@ const categories = Object.keys(categoryLabels);
     font-family: var(--font-mono);
     font-size: 0.8125rem;
     color: var(--text-on-dark);
-    opacity: 0.4;
+    opacity: 0.7;
     letter-spacing: 0.05em;
     transition: opacity 0.2s;
   }
@@ -258,7 +258,6 @@ const categories = Object.keys(categoryLabels);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--text-muted-dark);
-    opacity: 0.5;
     letter-spacing: 0.04em;
   }
 
@@ -290,17 +289,15 @@ const categories = Object.keys(categoryLabels);
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     color: var(--text-muted-dark);
-    opacity: 0.6;
     letter-spacing: 0.04em;
     display: block;
   }
   .post-category {
     font-family: var(--font-mono);
-    font-size: 0.5625rem;
+    font-size: 0.6875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--gold);
-    opacity: 0.7;
   }
 
   .post-title {
@@ -322,7 +319,7 @@ const categories = Object.keys(categoryLabels);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--gold);
-    opacity: 0.5;
+    opacity: 0.75;
     transition: opacity 0.2s;
   }
 
@@ -360,8 +357,8 @@ const categories = Object.keys(categoryLabels);
   .footer-links a:hover { color: var(--cream); }
   .footer-bottom {
     font-family: var(--font-mono);
-    font-size: 0.625rem;
-    color: rgba(240, 232, 216, 0.2);
+    font-size: 0.75rem;
+    color: var(--text-faint-dark);
   }
 
   /* ── RESPONSIVE ── */
