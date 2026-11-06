@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <title>Fruits</title>
+  <!-- sleeve cuff -->
+  <rect x="58" y="320" width="110" height="34" rx="8" transform="rotate(14 113 337)"/>
+  <!-- back of palm and fingers behind apple -->
+  <path d="M88 316 L104 244 C110 220 120 210 134 206"/>
+  <!-- apple -->
+  <path d="M215 118 C180 92 118 98 112 168 C106 236 156 300 190 296 C202 294 208 288 215 288 C222 288 228 294 240 296 C274 300 324 236 318 168 C312 98 250 92 215 118 Z" fill="#fff"/>
+  <path d="M215 118 C214 96 220 80 232 66"/>
+  <path d="M224 96 C236 66 272 60 288 70 C274 98 246 106 224 96 Z"/>
+  <!-- thumb wrapping the front -->
+  <path d="M150 316 C166 296 172 278 178 262 L232 222 C254 206 274 230 254 246 L214 276 C200 302 182 322 160 330" fill="#fff"/>
+</svg>

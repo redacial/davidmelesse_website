@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <title>Ownership / Responsibility</title>
+  <!-- forked track -->
+  <path d="M30 370 H370"/>
+  <path d="M170 370 C240 370 300 352 370 322"/>
+  <!-- switch stand -->
+  <rect x="120" y="290" width="140" height="50" rx="10"/>
+  <!-- lever -->
+  <path d="M182 290 L262 108 M208 290 L280 126"/>
+  <circle cx="195" cy="290" r="16" fill="#fff"/>
+  <circle cx="274" cy="100" r="22" fill="#fff"/>
+  <!-- sleeve and cuff -->
+  <path d="M392 150 H340 V250 H392"/>
+  <rect x="318" y="160" width="22" height="80" rx="4"/>
+  <!-- fist gripping the lever -->
+  <path d="M318 172 C300 160 270 150 245 162 C228 170 226 186 236 196 C224 204 222 220 234 228 C226 238 230 254 246 256 C266 258 300 240 318 228" fill="#fff"/>
+  <path d="M236 196 C250 194 262 192 274 196 M234 228 C248 224 260 222 272 226"/>
+  <path d="M248 162 C262 172 282 176 300 172"/>
+</svg>

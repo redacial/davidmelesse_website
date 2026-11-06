@@ -84,6 +84,36 @@ function formatDate(date: Date) {
   </section>
 
 
+  <!-- ═══════ CORE VALUES ═══════ -->
+  <section id="core-values" class="section section-light values-section">
+    <div class="inner">
+      <p class="section-lede">What I hold myself and others to.</p>
+      <span class="eyebrow eyebrow-crimson">Core values</span>
+      <div class="values-grid">
+
+        <article class="card value-card">
+          <h3>Ownership/Responsibility</h3>
+          <img src="/core-values/responsibility.svg" alt="A hand pulling a railroad switch lever" class="value-icon" width="400" height="400" loading="lazy" />
+          <p>People with a real sense of duty feel obligated by their own nature, not by outside pressure. Something internal pushes and drives them. Faced with a trolley problem, they don't say, "The train's already going that direction." They ask, "What do I do?"</p>
+        </article>
+
+        <article class="card value-card">
+          <h3>Patience</h3>
+          <img src="/core-values/patience.svg" alt="An hourglass resting on an open palm" class="value-icon" width="400" height="400" loading="lazy" />
+          <p>Patience means admitting when I don't know, sitting with something attentively, and resisting the urge to act rashly. So much is unknown, and wisdom comes through patience.</p>
+        </article>
+
+        <article class="card value-card">
+          <h3>Fruits</h3>
+          <img src="/core-values/fruits.svg" alt="A hand holding an apple" class="value-icon" width="400" height="400" loading="lazy" />
+          <p>I don't care how someone works or what their working style is. I care about the fruits: proof, evidence, and the actual work getting done.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
   <!-- ═══════ BUILDING ═══════ -->
   <section class="section section-light">
     <div class="inner">
@@ -511,6 +541,29 @@ function formatDate(date: Date) {
   .card-link-dark { color: var(--gold); }
   .card:hover .card-link { opacity: 0.75; }
 
+  /* ── CORE VALUES ── */
+  .values-section { scroll-margin-top: 1rem; }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .value-card {
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .value-card:hover { transform: none; }
+  .value-icon {
+    width: 150px;
+    height: 150px;
+    margin: 1rem 0 1.5rem;
+  }
+  .value-card p { text-align: left; }
+
   /* ── WRITING ── */
   .writing-grid {
     display: grid;
@@ -713,6 +766,7 @@ function formatDate(date: Date) {
     .hero-portrait { width: clamp(150px, 38vw, 220px); flex-shrink: 0; }
     .now-card { flex: 1; }
     .project-grid { grid-template-columns: 1fr; }
+    .values-grid  { grid-template-columns: 1fr; }
     .writing-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {

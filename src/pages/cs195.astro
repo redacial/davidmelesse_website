@@ -48,7 +48,7 @@ const groups: { label: string; eyebrow: string; items: Item[] }[] = [
     eyebrow: 'Career',
     items: [
       { title: 'Résumé', status: 'In progress', note: 'Draft submitted' },
-      { title: 'Personal Core Values', status: 'Upcoming' },
+      { title: 'Personal Core Values', status: 'Submitted', href: '/#core-values' },
       { title: 'Organization Research', status: 'Upcoming' },
       { title: 'Cover Letter', status: 'Upcoming' },
     ],
@@ -111,7 +111,7 @@ const statusClass = {
               {group.items.map((item) => (
                 <li class="work-item">
                   {item.href ? (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer" class="work-title work-link">{item.title} →</a>
+                    <a href={item.href} {...(item.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} class="work-title work-link">{item.title} →</a>
                   ) : (
                     <span class="work-title">{item.title}</span>
                   )}

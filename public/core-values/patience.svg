@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+  <title>Patience</title>
+  <!-- hourglass --><g transform="translate(0 8)">
+  <path d="M150 50 H280 M150 240 H280"/>
+  <path d="M170 50 C170 120 207 132 207 145 C207 158 170 170 170 240"/>
+  <path d="M260 50 C260 120 223 132 223 145 C223 158 260 170 260 240"/>
+  <path d="M188 100 H242"/>
+  <path d="M215 160 V196"/>
+  <path d="M185 238 C195 214 235 214 245 238"/></g>
+  <!-- sleeve and cuff -->
+  <path d="M20 245 H90 V375 H20"/>
+  <rect x="90" y="260" width="22" height="95" rx="3"/>
+  <!-- open palm -->
+  <path d="M112 272 H130 C160 250 200 246 240 256 C275 258 320 252 352 252 C374 252 378 270 362 278 C330 292 292 306 258 322 C228 336 190 342 160 340 C140 339 125 337 112 337"/>
+  <path d="M206 292 C240 294 268 286 270 270"/>
+</svg>
